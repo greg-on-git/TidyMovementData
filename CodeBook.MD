@@ -1,9 +1,7 @@
 ## The Data
-The data set contains information from sensors in smartphones while the owner carried out various activities.  This data helps us to understand real-life data for purposes of reporting fitness information to smartphone users via various apps.
+The tidyData.txt data set contains information from sensors in smartphones while the owner carried out various activities.  This data helps us to understand real-life data for purposes of reporting fitness information to smartphone users via various apps.
 
-The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
-
-The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
+The original data can be found at [The UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
 ## Transformation
 
@@ -11,6 +9,43 @@ The data in the original experiments has been modified to include both the test 
 
 Out of this, the tidyData.txt file has been made, which contains only the average of each variable for each activity and each subject.
 
-## Links
+## Columns in tidyData
 
-See the Readme file for more information on where the data originated.
+The identifier columns are used to indicate which activity was performed and which subject performed it.
+
+* "activityId"
+* "subjectId"
+ 
+The measurement columns show what was measured
+
+* "timeBodyAccMagnitudeMean"
+* "timeBodyAccMagnitudeStdDev"
+* "timeGravityAccMagnitudeMean"
+* "timeGravityAccMagnitudeStdDev"
+* "timeBodyAccJerkMagnitudeMean"
+* "timeBodyAccJerkMagnitudeStdDev"
+* "timeBodyGyroMagnitudeMean"
+* "timeBodyGyroMagnitudeStdDev"
+* "timeBodyGyroJerkMagnitudeMean"
+* "timeBodyGyroJerkMagnitudeStdDev"
+* "freqBodyAccMagnitudeMean"
+* "freqBodyAccMagnitudeStdDev"
+* "freqBodyAccJerkMagnitudeMean"
+* "freqBodyAccJerkMagnitudeStdDev"
+* "freqBodyGyroMagnitudeMean"
+* "freqBodyGyroMagnitudeStdDev"
+* "freqBodyGyroJerkMagnitudeMean"
+* "freqBodyGyroJerkMagnitudeStdDev"
+
+The activityType column was added to easily see which activity was performed
+
+* "activityType"
+
+Possible values of this column include
+
+* WALKING (value 1): subject was walking during the test
+* WALKING_UPSTAIRS (value 2): subject was walking up a staircase during the test
+* WALKING_DOWNSTAIRS (value 3): subject was walking down a staircase during the test
+* SITTING (value 4): subject was sitting during the test
+* STANDING (value 5): subject was standing during the test
+* LAYING (value 6): subject was laying down during the test
